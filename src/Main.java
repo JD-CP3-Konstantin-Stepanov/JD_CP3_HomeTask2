@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int[] sales = {5000,0,999};
+        long[] sales = {2000L, 0L, 999L};
         SalesManager salesManager = new SalesManager(sales);
         System.out.println("Максимальная продажа: " + salesManager.max());
     }
