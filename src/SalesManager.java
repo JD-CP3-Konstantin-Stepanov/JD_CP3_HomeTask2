@@ -1,15 +1,15 @@
 import java.util.Arrays;
 
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1L;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
@@ -17,10 +17,9 @@ public class SalesManager {
         return max;
     }
 
-    public int trimmedAvg() {
-
+    public long trimmedAvg() {
         Arrays.sort(sales);
-        int sm = 0;
+        long sm = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales.length <= 2) {
                 sm += sales[i];
